@@ -5,6 +5,8 @@ on:
     paths-ignore:
      #- '.github/workflows/**'
   workflow_dispatch:
+# workflow_dispatch event will only trigger a workflow run if the workflow file is on the default branch.
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 
 name: Build and Scan
 jobs:
