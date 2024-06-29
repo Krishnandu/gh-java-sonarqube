@@ -19,6 +19,12 @@ jobs:
           echo "Repo URL: ${{ vars.SONARQUBE_URL }}"
           echo "Repo Secrets: ${{ secrets.SONARQUBE_SECRET }}"
 
+      - name: Access and output Env() specific secrets & variables
+        run: |
+          echo "Repo URL: ${{ env.SONARQUBE_URL }}"
+          echo "Repo Secrets: ${{ env.SONARQUBE_SECRET }}"
+
+
     #   - name: Checkout source code
     #     uses: actions/checkout@v3 # Checks out the repository under $GITHUB_WORKSPACE
 
