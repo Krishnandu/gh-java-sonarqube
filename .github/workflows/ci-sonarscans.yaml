@@ -27,8 +27,8 @@ jobs:
 
       - name: Access and output Env(develop) specific secrets & variables
         run: |
-          echo "Repo URL: ${{ env.SONARQUBE_URL }}"
-          echo "Repo Secrets: ${{ env.SONARQUBE_SECRET }}"
+          echo "Env URL: ${{ env.SONARQUBE_URL }}"
+          echo "Env Secrets: ${{ env.SONARQUBE_SECRET }}"
 
 
     #   - name: Checkout source code
