@@ -45,7 +45,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5 # Sets up Maven with the specified version
         with:
-          maven-version: 3.9.8 # Specifies the Maven version to be set up
+          maven-version: 3.9.8 # Specifies the Maven version to be set up.
 
       - name: Build with Maven
         run: mvn -U clean install # Runs Maven commands to clean and install the project
