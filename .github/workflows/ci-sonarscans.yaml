@@ -17,7 +17,7 @@ jobs:
       name: develop
     env:
       SONARQUBE_URL: ${{ vars.SONARQUBE_URL }}
-      SONARQUBE_SECRET: ${{ vars.SONARQUBE_SECRET }}
+      SONARQUBE_SECRET: ${{ secrets.SONARQUBE_SECRET }}
 
     steps:
     # Cannot reference variables/secrets at Repo level if environment is defined.
