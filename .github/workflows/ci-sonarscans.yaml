@@ -16,8 +16,8 @@ jobs:
     steps:
       - name: Access and output Repo secrets & variables
         run: |
-          echo: "Repo URL: ${{ secrets.SONARQUBE_URL }}"
-          echo: "Repo Secrets: ${{ secrets.SONARQUBE_SECRET }}"
+          echo "Repo URL: ${{ secrets.SONARQUBE_URL }}"
+          echo "Repo Secrets: ${{ secrets.SONARQUBE_SECRET }}"
 
     #   - name: Checkout source code
     #     uses: actions/checkout@v3 # Checks out the repository under $GITHUB_WORKSPACE
