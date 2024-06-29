@@ -13,13 +13,17 @@ jobs:
     runs-on: ubuntu-latest # Specifies the runner on which the job will run
     environment:
       name: develop
+    env:
+      SONARQUBE_URL: ${{ vars.SONARQUBE_URL }}
+      SONARQUBE_SECRET: ${{ vars.SONARQUBE_SECRET }}
+
     steps:
-      - name: Access and output Repo secrets & variables
+      - name: Access and output secrets & variables defined at the Repository level.
         run: |
           echo "Repo URL: ${{ vars.SONARQUBE_URL }}"
           echo "Repo Secrets: ${{ secrets.SONARQUBE_SECRET }}"
 
-      - name: Access and output Env() specific secrets & variables
+      - name: Access and output Env(develop) specific secrets & variables
         run: |
           echo "Repo URL: ${{ env.SONARQUBE_URL }}"
           echo "Repo Secrets: ${{ env.SONARQUBE_SECRET }}"
