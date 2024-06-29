@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Access and output Repo secrets & variables
         run: |
-          echo "Repo URL: ${{ secrets.SONARQUBE_URL }}"
+          echo "Repo URL: ${{ vars.SONARQUBE_URL }}"
           echo "Repo Secrets: ${{ secrets.SONARQUBE_SECRET }}"
 
     #   - name: Checkout source code
